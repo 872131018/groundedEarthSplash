@@ -10,7 +10,7 @@ $(document).ready()
 		*/
     if(validateSignup())
 		{
-      var url = "http://73.243.194.169/nukleus/signup";
+      var url = window.location.href+"/signup";
       $.post(url, $("form").serialize(), function(response, status)
     	{
     		if(status == "success")

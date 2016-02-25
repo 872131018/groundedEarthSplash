@@ -37,7 +37,7 @@ $app->post("/signup", function ($request, $response, $args) {
     /*
     * Create and send the request object
     */
-    $request = $client->post('nukleus/index.php/saveEmail/index', array(), $data);
+    $request = $client->post('nukleus/saveEmail/index', array(), $data);
     /*
     * Make the request, use echo to get the response string
     */

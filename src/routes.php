@@ -1,4 +1,8 @@
 <?php
+/*
+* Grab the Guzzle namespace
+*/
+use Guzzle\Http\Client;
 // Routes
 /*
 * Set the index route for the splash page
@@ -25,23 +29,20 @@ $app->post("/signup", function ($request, $response, $args) {
     /*
     * Set the url for the mothership!
     */
-    $url = 'http://73.243.194.169/nukleus/index.php/saveEmail/index';
+    $url = 'http://73.243.194.169/';
     /*
-    * Init the curl handle
+    * Create a client and provide a base URL
     */
-    $ch = curl_init($url);
+    $client = new Client($url);
     /*
-    * Build post data to pass through
+    * Create and send the request object
     */
-    $post = http_build_query($data, '', '&');
-    # Setting our options
-    curl_setopt($ch, CURLOPT_POST, 1);
-    curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    # Get the response
-    $response = curl_exec($ch);
-    curl_close($ch);
-    var_dump($response); die;
+    $request = $client->post('nukleus/index.php/saveEmail/index', array(), $data);
+    /*
+    * Make the request, use echo to get the response string
+    */
+    $response = $request->send()->getBody();
+    echo $response; die;
     /*
     * Render response
     */

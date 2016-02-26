@@ -16,7 +16,7 @@ $app->get('/', function ($request, $response, $args) {
     return $this->renderer->render($response, 'splash.php', $args);
 });
 /*
-* Set the index route for the splash page
+* Set the signup route for the request
 */
 $app->post("/signup", function ($request, $response, $args) {
     /*
@@ -37,12 +37,13 @@ $app->post("/signup", function ($request, $response, $args) {
     /*
     * Create and send the request object
     */
-    $request = $client->post('nukleus/index.php/saveEmail/index', array(), $data);
+    $request = $client->post('groundedEarthMothership/index.php/saveEmail/index', array(), $data);
     /*
     * Make the request, use echo to get the response string
     */
-    $response = $request->send()->getBody();
-    echo $response; die;
+    $response = $request->send();
+    var_dump($response); die;
+    echo $response->json(); die;
     /*
     * Render response
     */

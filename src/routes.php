@@ -30,6 +30,7 @@ $app->post("/signup", function ($request, $response, $args) {
     * Set the url for the mothership!
     */
     $url = 'http://73.243.194.169/';
+    //$url = 'http://localhost:8888/';
     /*
     * Create a client and provide a base URL
     */
@@ -42,10 +43,17 @@ $app->post("/signup", function ($request, $response, $args) {
     * Make the request, use echo to get the response string
     */
     $response = $request->send();
-    var_dump($response); die;
-    echo $response->json(); die;
+    $status = $response->json();
     /*
     * Render response
     */
-    return $this->renderer->render($response, 'splash.php', $args);
+    switch($status['result'])
+    {
+      case "true":
+        return $this->renderer->render($response, 'success.php', $args);
+        break;
+      default:
+        return $this->renderer->render($response, 'failure.php', $args);
+        break;
+    }
 });

@@ -38,12 +38,12 @@ $app->post("/signup", function ($request, $response, $args) {
     /*
     * Create and send the request object
     */
-    $request = $client->post('groundedEarthMothership/index.php/email/index', array(), $data);
+    $guzzle_request = $client->post('groundedEarthMothership/index.php/email/index', array(), $data);
     /*
     * Make the request, use echo to get the response string
     */
-    $response = $request->send();
-    $status = $response->json();
+    $guzzle_response = $guzzle_request->send();
+    $status = $guzzle_response->json();
     /*
     * Render response
     */

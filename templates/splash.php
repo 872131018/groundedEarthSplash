@@ -1,3 +1,9 @@
+<?php
+/*
+* Set a base url for assets to use
+*/
+$base_url = 'http://73.243.194.169/groundedEarthSplash/public/';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <?php /*
@@ -22,16 +28,16 @@
 <?php /*
 * CSS
 */ ?>
-<link rel="stylesheet" type="text/css" href="/public/Skeleton-2.0.4/css/normalize.css">
-<link rel="stylesheet" type="text/css" href="/public/Skeleton-2.0.4/css/skeleton.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url; ?>Skeleton-2.0.4/css/normalize.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url; ?>Skeleton-2.0.4/css/skeleton.css">
 <?php /*
 * Page CSS
 */ ?>
-<link rel="stylesheet" type="text/css" href="/public/css/styles.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url; ?>css/styles.css">
 <?php /*
 * Favicon
 */ ?>
-<link rel="icon" type="image/png" href="/resources/Skeleton-2.0.4/images/favicon.png">
+<link rel="icon" type="image/png" href="<?php echo base_url; ?>Skeleton-2.0.4/images/favicon.png">
 </head>
 <?php /*
 * Primary Page Layout
@@ -71,10 +77,10 @@
 	<?php /*
 	* Then load the internal sources second
 	*/ ?>
-  <script type="text/javascript" src="js/validateSignup.js"></script>
+  <script type="text/javascript" src="<?php echo base_url; ?>js/validateSignup.js"></script>
 	<?php /*
 	* Load the driver for execution
 	*/ ?>
-	<script type="text/javascript" src="js/splashDriver.js"></script>
+	<script type="text/javascript" src="<?php echo base_url; ?>js/splashDriver.js"></script>
 </body>
 </html>

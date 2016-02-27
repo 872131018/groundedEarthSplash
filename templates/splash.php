@@ -18,20 +18,20 @@
 <?php /*
 * Font
 */ ?>
-<link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Raleway:400,300,600">
 <?php /*
 * CSS
 */ ?>
-<link rel="stylesheet" type="text/css" href="Skeleton-2.0.4/css/normalize.css">
-<link rel="stylesheet" type="text/css" href="Skeleton-2.0.4/css/skeleton.css">
+<link rel="stylesheet" type="text/css" href="/public/Skeleton-2.0.4/css/normalize.css">
+<link rel="stylesheet" type="text/css" href="/public/Skeleton-2.0.4/css/skeleton.css">
 <?php /*
 * Page CSS
 */ ?>
-<link rel="stylesheet" type="text/css" href="css/styles.css">
+<link rel="stylesheet" type="text/css" href="/public/css/styles.css">
 <?php /*
 * Favicon
 */ ?>
-<link rel="icon" type="image/png" href="resources/Skeleton-2.0.4/images/favicon.png">
+<link rel="icon" type="image/png" href="/resources/Skeleton-2.0.4/images/favicon.png">
 </head>
 <?php /*
 * Primary Page Layout

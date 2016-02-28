@@ -2,8 +2,8 @@
 /*
 * Set a base url for assets to use
 */
-//$base_url = 'http://73.243.194.169/groundedEarthSplash/public/';
-$base_url = 'http://localhost:8888/groundedEarthSplash/public/';
+$base_url = 'http://73.243.194.169/groundedEarthSplash/public/';
+//$base_url = 'http://localhost:8888/groundedEarthSplash/public/';
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -1,3 +1,16 @@
 /*
 * CSS for different sections
 */
+/*
+* CSS for the logo sticker
+*/
+.sticker {
+width: 300px;
+height: 300px;
+}
+.logo-sticker .sticker-img {
+background-image: url(../images/logo_small.png);
+}
+.logo-sticker .sticker-shadow {
+opacity: 0.4;
+}

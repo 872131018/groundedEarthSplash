@@ -2,7 +2,8 @@
 /*
 * Set a base url for assets to use
 */
-$base_url = 'http://73.243.194.169/groundedEarthSplash/public/';
+//$base_url = 'http://73.243.194.169/groundedEarthSplash/public/';
+$base_url = 'http://localhost:8888/groundedEarthSplash/public/';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -50,24 +51,15 @@ $base_url = 'http://73.243.194.169/groundedEarthSplash/public/';
           <div><h4>Grounded Earth Designs.</h4></div>
           <div><h4>Welcome.</h4></div>
           <a class="button">Behold</a>
-        </div>
-        <div class="six columns">
-          <img class="phone" src="images/iphone.png">
-          <img class="phone" src="images/iphone.png">
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="section">
-    <div class="container">
-      <div class="row">
-        <div class="twelve columns">
           <form>
             <input type="email" name="email" placeholder="Email Address">
             <input class="button" type="button" value="Sign Up" data-delegate="signup">
           </form>
         </div>
-      </div>
+        <div class="six columns">
+          <div class="sticker logo-sticker"></div>
+        </div>
+      </diV>
     </div>
   </div>
   <?php /*
@@ -77,6 +69,7 @@ $base_url = 'http://73.243.194.169/groundedEarthSplash/public/';
 	<?php /*
 	* Then load the internal sources second
 	*/ ?>
+  <script type="text/javascript" src="<?php echo $base_url; ?>stickerjs-master/sticker.min.js"></script>
   <script type="text/javascript" src="<?php echo $base_url; ?>js/validateSignup.js"></script>
 	<?php /*
 	* Load the driver for execution

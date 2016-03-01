@@ -4,6 +4,12 @@ $(document).ready()
   * Set the logo sticker
   */
   Sticker.init('.logo-sticker');
+  /*
+  * Init the design slider
+  */
+  $("#Glide").glide({
+    type: "carousel"
+  });
 	/*
   * Delegate all clicks to the document
   */

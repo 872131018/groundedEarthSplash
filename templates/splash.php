@@ -2,8 +2,8 @@
 /*
 * Set a base url for assets to use
 */
-$base_url = 'http://73.243.194.169/groundedEarthSplash/public/';
-//$base_url = 'http://localhost:8888/groundedEarthSplash/public/';
+//$base_url = 'http://73.243.194.169/groundedEarthSplash/public/';
+$base_url = 'http://localhost:8888/groundedEarthSplash/public/';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,6 +31,8 @@ $base_url = 'http://73.243.194.169/groundedEarthSplash/public/';
 */ ?>
 <link rel="stylesheet" type="text/css" href="<?php echo $base_url; ?>Skeleton-2.0.4/css/normalize.css">
 <link rel="stylesheet" type="text/css" href="<?php echo $base_url; ?>Skeleton-2.0.4/css/skeleton.css">
+<link rel="stylesheet" type="text/css" href="<?php echo $base_url; ?>Glide.js-master/dist/css/glide.core.css">
+<link rel="stylesheet" type="text/css" href="<?php echo $base_url; ?>Glide.js-master/dist/css/glide.theme.css">
 <?php /*
 * Page CSS
 */ ?>
@@ -62,6 +64,52 @@ $base_url = 'http://73.243.194.169/groundedEarthSplash/public/';
       </diV>
     </div>
   </div>
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="three columns"></div>
+        <div class="six columns">
+          <div id="Glide" class="glide">
+            <div class="glide__arrows">
+                <button class="glide__arrow prev" data-glide-dir="<">prev</button>
+                <button class="glide__arrow next" data-glide-dir=">">next</button>
+            </div>
+            <div class="glide__wrapper">
+                <ul class="glide__track">
+                  <?php
+                    /*
+                    * Load images into the slider
+                    */
+                    $images = [
+                      'bear.png',
+                      'buffalo.png',
+                      'cougar.png',
+                      'mountains.png',
+                      'skull.png',
+                      'wolf.png'
+                    ];
+                    /*
+                    * Iterate through the images and create the slider
+                    */
+                    foreach($images as $key => $value)
+                    {
+                      $html = "<li class='glide__slide'>";
+                      $url = $base_url."images/".$value;
+                      $html .= "<img src='{$url}'>";
+                      $html .= "</li>";
+                      echo $html;
+                    }
+                  ?>
+                </ul>
+            </div>
+            <div class="glide__bullets"></div>
+          </div>
+        </div>
+        <div class="three columns"></div>
+      </div>
+    </div>
+  </div>
+
   <?php /*
 	* Must load the external sources first
 	*/ ?>
@@ -70,6 +118,7 @@ $base_url = 'http://73.243.194.169/groundedEarthSplash/public/';
 	* Then load the internal sources second
 	*/ ?>
   <script type="text/javascript" src="<?php echo $base_url; ?>stickerjs-master/sticker.min.js"></script>
+  <script type="text/javascript" src="<?php echo $base_url; ?>Glide.js-master/dist/glide.min.js"></script>
   <script type="text/javascript" src="<?php echo $base_url; ?>js/validateSignup.js"></script>
 	<?php /*
 	* Load the driver for execution

@@ -1,5 +1,10 @@
 <?php
 /*
+* Load any .env values that might be needed
+*/
+$dotenv = new Dotenv\Dotenv(__DIR__.'/..');
+$dotenv->load();
+/*
 * Grab the Guzzle namespace
 */
 use Guzzle\Http\Client;
@@ -27,22 +32,18 @@ $app->post("/signup", function ($request, $response, $args) {
         'email' => $email
     );
     /*
-    * Set the url for the mothership!
-    */
-    $url = 'http://73.243.194.169:82/';
-    //$url = 'http://localhost:8888/';
-    /*
     * Create a client and provide a base URL
     */
-    $client = new Client($url);
+    $guzzle_client = new Client(getenv('MOTHERSHIP_URL'));
     /*
     * Create and send the request object
     */
-    $guzzle_request = $client->post('groundedEarthMothership/index.php/email/index', array(), $data);
+    $guzzle_request = $guzzle_client->post(getenv('SIGNUP_ENDPOINT'), array(), $data);
     /*
     * Make the request, use echo to get the response string
     */
     $guzzle_response = $guzzle_request->send();
+    echo $guzzle_response->getBody(); die;
     $status = $guzzle_response->json();
     /*
     * Render response

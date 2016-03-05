@@ -17,6 +17,7 @@
         "slim/php-view": "^2.0",
         "monolog/monolog": "^1.17",
         "twig/twig": "~1.0",
-        "guzzle/guzzle": "~3.9"
+        "guzzle/guzzle": "~3.9",
+        "vlucas/phpdotenv": "^2.2"
     }
 }

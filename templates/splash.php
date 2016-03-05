@@ -93,8 +93,8 @@ $base_url = 'http://localhost:8888/groundedEarthSplash/public/';
                     */
                     foreach($images as $key => $value)
                     {
-                      $html = "<li class='glide__slide'>";
                       $url = $base_url."images/".$value;
+                      $html = "<li class='glide__slide'>";
                       $html .= "<img src='{$url}'>";
                       $html .= "</li>";
                       echo $html;

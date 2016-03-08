@@ -16,17 +16,24 @@ $(document).ready()
   $(document).on('click', '[data-delegate=signup]', function(event)
   {
 		/*
-		* Validate user email
+		* Validate user email @TODO
 		*/
     if(validateSignup())
 		{
+      /*
+      * Set url for post to correct endpoint
+      */
       var url = window.location.href+"/signup";
       $.post(url, $("form").serialize(), function(response, status)
     	{
     		if(status == "success")
     		{
-          console.log(response)
+          $('form').html(response);
     		}
+        else
+        {
+          console.log("server error");
+        }
     	});
 		}
     /*

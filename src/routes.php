@@ -43,7 +43,6 @@ $app->post("/signup", function ($request, $response, $args) {
     * Make the request, use echo to get the response string
     */
     $guzzle_response = $guzzle_request->send();
-    echo $guzzle_response->getBody(); die;
     $status = $guzzle_response->json();
     /*
     * Render response
@@ -54,7 +53,7 @@ $app->post("/signup", function ($request, $response, $args) {
         return $this->renderer->render($response, 'success.php', $args);
         break;
       default:
-        return $this->renderer->render($response, 'failure.php', $args);
+        return $this->renderer->render($response, 'failure.php', $args, 500);
         break;
     }
 });

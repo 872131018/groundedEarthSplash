@@ -7,6 +7,7 @@ $base_url = 'http://localhost:8888/groundedEarthSplash/public/';
 ?>
 <!DOCTYPE html>
 <html lang="en">
+<head>
 <?php /*
 * Basic Page Needs
 */ ?>
@@ -52,7 +53,6 @@ $base_url = 'http://localhost:8888/groundedEarthSplash/public/';
         <div class="six columns">
           <div><h4>Grounded Earth Designs.</h4></div>
           <div><h4>Welcome.</h4></div>
-          <a class="button">Behold</a>
           <form>
             <input type="email" name="email" placeholder="Email Address">
             <input class="button" type="button" value="Sign Up" data-delegate="signup">

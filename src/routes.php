@@ -15,7 +15,14 @@ use Guzzle\Http\Client;
 $app->get('/', function ($request, $response, $args) {
   // Sample log message
   //$this->logger->info("Slim-Skeleton '/' route");
-
+  $args['images'] = [
+    'bear.png',
+    'buffalo.png',
+    'cougar.png',
+    'mountains.png',
+    'skull.png',
+    'wolf.png'
+  ];
   // Render index view
   //return $this->renderer->render($response, 'index.phtml', $args);
   return $this->renderer->render($response, 'splash.php', $args);

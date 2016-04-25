@@ -50,28 +50,13 @@ $base_url = 'http://localhost:8888/groundedEarthSplash/public/';
   <div class="section">
     <div class="container">
       <div class="row">
-        <div class="six columns">
+        <div class="twelve columns">
           <div><h4>Grounded Earth Designs.</h4></div>
           <div><h4>Welcome.</h4></div>
-          <form>
-            <input type="email" name="email" placeholder="Email right here!">
-            <input type="text" name="name" placeholder="Full name please!">
-            <input type="text" name="city" placeholder="Your city here!">
-            <input type="text" name="state" placeholder="State goes here!">
-            <input class="button" type="button" value="Sign Up" data-delegate="signup">
-          </form>
         </div>
-        <div class="six columns">
-          <div class="sticker logo-sticker"></div>
-        </div>
-      </diV>
-    </div>
-  </div>
-  <div class="section">
-    <div class="container">
+      </div>
       <div class="row">
-        <div class="three columns"></div>
-        <div class="six columns">
+        <div class="twelve columns">
           <div id="Glide" class="glide">
             <div class="glide__arrows">
                 <button class="glide__arrow prev" data-glide-dir="<">prev</button>
@@ -80,17 +65,6 @@ $base_url = 'http://localhost:8888/groundedEarthSplash/public/';
             <div class="glide__wrapper">
                 <ul class="glide__track">
                   <?php
-                    /*
-                    * Load images into the slider
-                    */
-                    $images = [
-                      'bear.png',
-                      'buffalo.png',
-                      'cougar.png',
-                      'mountains.png',
-                      'skull.png',
-                      'wolf.png'
-                    ];
                     /*
                     * Iterate through the images and create the slider
                     */
@@ -108,11 +82,26 @@ $base_url = 'http://localhost:8888/groundedEarthSplash/public/';
             <div class="glide__bullets"></div>
           </div>
         </div>
-        <div class="three columns"></div>
       </div>
+      <div class="row">
+        <div class="twelve coulmns">
+          <div><h4>Want to join the mailing list?</h4></div>
+          <div>
+            <form>
+              <input type="email" name="email" placeholder="Email right here!">
+              <input type="text" name="name" placeholder="Full name please!">
+              <input type="text" name="city" placeholder="Your city here!">
+              <input type="text" name="state" placeholder="State goes here!">
+              <input class="button" type="button" value="Sign Up" data-delegate="signup">
+            </form>
+          </div>
+        </div>
+        <div class="twelve columns">
+          <div class="sticker logo-sticker"></div>
+        </div>
+      </diV>
     </div>
   </div>
-
   <?php /*
 	* Must load the external sources first
 	*/ ?>
